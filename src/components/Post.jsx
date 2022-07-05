@@ -12,7 +12,7 @@ const Post = ({ post }) => {
       />
       <header className='flex items-center justify-between px-2 py-2 leading-tight md:px-2 md:py-2'>
         <h1 className='text-md'>
-          <span className='text-black'>{post.title}</span>
+          <span className='text-pink-500 font-bold'>{post.title}</span>
         </h1>
       </header>
 
