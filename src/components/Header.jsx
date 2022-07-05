@@ -12,9 +12,11 @@ const Header = () => {
 
   return (
     <div className='flex justify-between items-center py-4'>
-      <span className='font-bold text-xl tracking-widest text-gray-600 cursor-pointer hover:text-gray-500'>
-        Hnak
-      </span>
+      <Link to='/'>
+        <span className='font-bold text-xl tracking-widest text-gray-600 cursor-pointer hover:text-gray-500'>
+          Hnak
+        </span>
+      </Link>
       <div className='flex items-center'>
         {!user ? (
           <>
