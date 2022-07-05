@@ -75,7 +75,7 @@ const PostForm = () => {
             type='submit'
             className='py-2 px-4 rounded-lg bg-slate-800 text-slate-100 font-bold text-sm hover:bg-slate-700 hover:text-slate-200 transition delay-100'
           >
-            Register
+            Create
           </button>
         </div>
       </form>
