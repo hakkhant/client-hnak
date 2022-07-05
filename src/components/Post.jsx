@@ -19,10 +19,6 @@ const Post = ({ post }) => {
       <div className='px-2 py-2 leading-tight md:px-2 md:py-2'>
         <p className='text-sm text-grey-500'>{post.content}</p>
       </div>
-
-      <footer className='flex items-center justify-between px-2 py-2 leading-none md:px-2 md:py-2'>
-        <small className='text-xs text-gray-500 '>{user}</small>
-      </footer>
     </article>
   );
 };
