@@ -4,7 +4,7 @@ import axios from '../services/axios';
 import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
-  const token = localStorage.getItem('token');
+  const user = JSON.parse(localStorage.getItem('user'));
   const navigate = useNavigate();
   const [posts, setPosts] = useState([]);
 
@@ -16,11 +16,11 @@ const Home = () => {
   };
 
   useEffect(() => {
-    if (!token) {
-      navigate('/');
+    if (!user) {
+      navigate('login');
     }
     fetchPosts();
-  }, [token, navigate]);
+  }, [user, navigate]);
 
   return (
     <div className='py-6'>

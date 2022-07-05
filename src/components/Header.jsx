@@ -18,7 +18,7 @@ const Header = () => {
       <div className='flex items-center'>
         {!user ? (
           <>
-            <Link to='/'>
+            <Link to='/login'>
               <span className='text-sm font-normal tracking-wide text-gray-600 cursor-pointer hover:text-gray-500 pr-4'>
                 Login
               </span>

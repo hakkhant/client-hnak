@@ -18,7 +18,7 @@ const PostForm = () => {
       },
     };
     await axios.post('/posts', formData, config);
-    navigate('/home');
+    navigate('/');
   };
 
   return (

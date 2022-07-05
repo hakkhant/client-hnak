@@ -12,9 +12,9 @@ const App = () => {
       <div className='max-w-6xl mx-auto px-4 lg:px-0'>
         <Header />
         <Routes>
-          <Route path='/' element={<Login />} />
+          <Route path='/' element={<Home />} />
+          <Route path='login' element={<Login />} />
           <Route path='register' element={<Register />} />
-          <Route path='home' element={<Home />} />
           <Route path='create' element={<PostForm />} />
         </Routes>
         <Footer />

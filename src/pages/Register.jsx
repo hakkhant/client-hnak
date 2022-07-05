@@ -10,7 +10,7 @@ const Register = () => {
       const response = await axios.post('/users/register', data);
       localStorage.setItem('user', JSON.stringify(response.data));
       localStorage.setItem('token', response.data.token);
-      navigate('/home');
+      navigate('/');
     } catch (err) {
       console.log(err);
     }
