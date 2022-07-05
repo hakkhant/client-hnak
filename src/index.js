@@ -12,13 +12,6 @@ import './index.css';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Routes>
-      <Route path='/' element={<App />}>
-        <Route index element={<Home />} />
-        <Route path='/login' element={<Login />} />
-        <Route path='/register' element={<Register />} />
-        <Route path='/create' element={<PostForm />} />
-      </Route>
-    </Routes>
+    <App />
   </React.StrictMode>
 );
