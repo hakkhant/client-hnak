@@ -37,7 +37,7 @@ const Header = () => {
               </span>
             </Link>
             <button
-              className='text-sm font-normal tracking-wide text-gray-600 cursor-pointer hover:text-gray-500'
+              className='inline text-sm font-normal tracking-wide text-gray-600 cursor-pointer hover:text-gray-500'
               onClick={logout}
             >
               Logout
