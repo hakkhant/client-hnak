@@ -8,7 +8,8 @@ const Register = () => {
   const onSubmit = async (data) => {
     try {
       const response = await axios.post('/api/register', data);
-      localStorage.setItem('user', JSON.stringify(response.data));
+      localStorage.setItem('user', JSON.stringify(response.data.user));
+      localStorage.setItem('token', response.data.token);
       navigate('/');
     } catch (err) {
       console.log(err);
