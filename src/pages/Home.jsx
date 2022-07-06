@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import Post from '../components/Post';
+import Spinner from '../components/Spinner';
 import axios from '../services/axios';
 import { useNavigate } from 'react-router-dom';
 
@@ -7,6 +8,7 @@ const Home = () => {
   const user = JSON.parse(localStorage.getItem('user'));
   const navigate = useNavigate();
   const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   const fetchPosts = async () => {
     const config = {
@@ -14,9 +16,11 @@ const Home = () => {
         Authorization: `Bearer ${localStorage.getItem('token')}`,
       },
     };
+    setLoading(true);
     const res = await axios.get('/posts', config);
     if (res) {
       setPosts(res.data);
+      setLoading(false);
     }
   };
 
@@ -26,6 +30,10 @@ const Home = () => {
     }
     fetchPosts();
   }, [user, navigate]);
+
+  if (loading) {
+    return <Spinner />;
+  }
 
   return (
     <div className='py-6'>
