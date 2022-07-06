@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import axios from '../services/axios';
 
 const PostForm = () => {
-  const token = localStorage.getItem('token');
   const navigate = useNavigate();
   const { register, handleSubmit } = useForm();
 
@@ -14,10 +13,10 @@ const PostForm = () => {
     formData.append('image', data.image[0]);
     const config = {
       headers: {
-        Authorization: `Bearer ${token}`,
+        Authorization: `Bearer ${localStorage.getItem('token')}`,
       },
     };
-    await axios.post('/api/memories', formData, config);
+    await axios.post('/memories', formData, config);
     navigate('/');
   };
 

@@ -5,17 +5,16 @@ import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
   const user = JSON.parse(localStorage.getItem('user'));
-  const token = localStorage.getItem('token');
   const navigate = useNavigate();
   const [posts, setPosts] = useState([]);
 
   const fetchPosts = async () => {
     const config = {
       headers: {
-        Authorization: `Bearer ${token}`,
+        Authorization: `Bearer ${localStorage.getItem('token')}`,
       },
     };
-    const res = await axios.get('/api/memories', config);
+    const res = await axios.get('/memories', config);
     if (res) {
       setPosts(res.data);
     }

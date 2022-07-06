@@ -1,15 +1,13 @@
 import { Link, useNavigate } from 'react-router-dom';
-import axios from '../services/axios';
 
 const Header = () => {
   const navigate = useNavigate();
   const user = JSON.parse(localStorage.getItem('user'));
 
-  const logout = async () => {
-    if (user) {
-      localStorage.removeItem('user');
-      navigate('/login');
-    }
+  const logout = () => {
+    localStorage.removeItem('user');
+    localStorage.removeItem('token');
+    navigate('/login');
   };
 
   return (
