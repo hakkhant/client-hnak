@@ -1,5 +1,6 @@
 import axios from 'axios';
 
 export default axios.create({
-  baseURL: 'https://server-hnak.onrender.com',
+  baseURL: 'https://api-memory-hnak.herokuapp.com/api',
+  withCredentials: true,
 });

@@ -12,12 +12,7 @@ const PostForm = () => {
     formData.append('content', data.content);
     formData.append('image', data.image[0]);
 
-    const config = {
-      headers: {
-        Authorization: `Bearer ${localStorage.getItem('token')}`,
-      },
-    };
-    await axios.post('/posts', formData, config);
+    await axios.post('/memories', formData);
     navigate('/');
   };
 

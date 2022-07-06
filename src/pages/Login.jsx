@@ -8,9 +8,8 @@ const Login = () => {
 
   const onSubmit = async (data) => {
     try {
-      const response = await axios.post('/users/login', data);
-      localStorage.setItem('user', JSON.stringify(response.data.user));
-      localStorage.setItem('token', response.data.token);
+      const response = await axios.post('/login', data);
+      localStorage.setItem('user', JSON.stringify(response.data));
       navigate('/');
     } catch (err) {
       console.log(err);

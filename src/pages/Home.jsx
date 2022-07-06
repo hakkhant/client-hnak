@@ -9,7 +9,7 @@ const Home = () => {
   const [posts, setPosts] = useState([]);
 
   const fetchPosts = async () => {
-    const res = await axios.get('/posts');
+    const res = await axios.get('/memories');
     if (res) {
       setPosts(res.data);
     }
@@ -17,7 +17,7 @@ const Home = () => {
 
   useEffect(() => {
     if (!user) {
-      navigate('login');
+      navigate('/login');
     }
     fetchPosts();
   }, [user, navigate]);
