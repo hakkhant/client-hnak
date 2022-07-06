@@ -16,7 +16,7 @@ const PostForm = () => {
         Authorization: `Bearer ${localStorage.getItem('token')}`,
       },
     };
-    await axios.post('/memories', formData, config);
+    await axios.post('/posts', formData, config);
     navigate('/');
   };
 

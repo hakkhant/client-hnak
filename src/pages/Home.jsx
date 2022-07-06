@@ -14,7 +14,7 @@ const Home = () => {
         Authorization: `Bearer ${localStorage.getItem('token')}`,
       },
     };
-    const res = await axios.get('/memories', config);
+    const res = await axios.get('/posts', config);
     if (res) {
       setPosts(res.data);
     }
