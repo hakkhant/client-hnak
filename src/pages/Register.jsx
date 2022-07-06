@@ -7,7 +7,7 @@ const Register = () => {
 
   const onSubmit = async (data) => {
     try {
-      const response = await axios.post('/register', data);
+      const response = await axios.post('/api/register', data);
       localStorage.setItem('user', JSON.stringify(response.data));
       navigate('/');
     } catch (err) {

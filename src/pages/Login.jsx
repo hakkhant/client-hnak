@@ -8,7 +8,7 @@ const Login = () => {
 
   const onSubmit = async (data) => {
     try {
-      const response = await axios.post('/login', data);
+      const response = await axios.post('/api/login', data);
       localStorage.setItem('user', JSON.stringify(response.data));
       navigate('/');
     } catch (err) {

@@ -12,7 +12,7 @@ const PostForm = () => {
     formData.append('content', data.content);
     formData.append('image', data.image[0]);
 
-    await axios.post('/memories', formData);
+    await axios.post('/api/memories', formData);
     navigate('/');
   };
 

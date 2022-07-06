@@ -9,7 +9,7 @@ const Home = () => {
   const [posts, setPosts] = useState([]);
 
   const fetchPosts = async () => {
-    const res = await axios.get('/memories');
+    const res = await axios.get('/api/memories');
     if (res) {
       setPosts(res.data);
     }
