@@ -10,24 +10,23 @@ const Home = () => {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  const fetchPosts = async () => {
-    const config = {
-      headers: {
-        Authorization: `Bearer ${localStorage.getItem('token')}`,
-      },
-    };
-    setLoading(true);
-    const res = await axios.get('/posts', config);
-    if (res) {
-      setPosts(res.data);
-      setLoading(false);
-    }
-  };
-
   useEffect(() => {
     if (!user) {
       navigate('/login');
     }
+    const fetchPosts = async () => {
+      const config = {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem('token')}`,
+        },
+      };
+      setLoading(true);
+      const res = await axios.get('/posts', config);
+      if (res) {
+        setPosts(res.data);
+        setLoading(false);
+      }
+    };
     fetchPosts();
   }, [user, navigate]);
 
@@ -36,7 +35,7 @@ const Home = () => {
   }
 
   return (
-    <div className='py-6'>
+    <div className='py-6 mx-2'>
       {posts?.length > 0 ? (
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2'>
           {posts.map((post) => (
