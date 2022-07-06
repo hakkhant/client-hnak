@@ -20,7 +20,6 @@ const Home = () => {
       setPosts(res.data);
     }
   };
-  fetchPosts();
 
   useEffect(() => {
     if (!user) {
