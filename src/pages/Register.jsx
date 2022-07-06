@@ -26,16 +26,16 @@ const Register = () => {
         className='py-4 px-4 rounded-lg shadow'
       >
         <div className='flex flex-col py-3 px-4'>
-          <label htmlFor='name' className='text-md py-2'>
+          <label htmlFor='username' className='text-md py-2'>
             Enter your name
           </label>
           <input
-            {...register('name', { required: true })}
+            {...register('username', { required: true })}
             type='text'
-            name='name'
-            autoComplete='name'
+            name='username'
+            autoComplete='username'
             autoFocus
-            placeholder='Enter your name...'
+            placeholder='Enter your username...'
             className='w-full p-2 border border-gray-300 rounded-lg'
           />
         </div>
@@ -62,19 +62,6 @@ const Register = () => {
             name='password'
             autoComplete='password'
             placeholder='Enter your password...'
-            className='w-full p-2 border border-gray-300 rounded-lg'
-          />
-        </div>
-        <div className='flex flex-col py-3 px-4'>
-          <label htmlFor='password_confirmation' className='text-md py-2'>
-            Confirm your password
-          </label>
-          <input
-            {...register('password_confirmation', { required: true })}
-            type='password'
-            name='password_confirmation'
-            autoComplete='password_confirmation'
-            placeholder='Confirm your password...'
             className='w-full p-2 border border-gray-300 rounded-lg'
           />
         </div>
