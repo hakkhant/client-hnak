@@ -6,8 +6,7 @@ const Header = () => {
   const user = JSON.parse(localStorage.getItem('user'));
 
   const logout = async () => {
-    const response = await axios.post('/api/logout');
-    if (response) {
+    if (user) {
       localStorage.removeItem('user');
       navigate('/login');
     }
