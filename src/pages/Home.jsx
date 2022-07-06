@@ -26,6 +26,7 @@ const Home = () => {
     if (!user) {
       navigate('/login');
     }
+    fetchPosts();
   }, [user, navigate]);
 
   return (
