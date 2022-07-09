@@ -29,13 +29,6 @@ const Header = () => {
                 </span>
               </div>
             </Link>
-            {/* <Link to='/register'>
-              <div className='px-4 py-2 mx-2 shadow rouned'>
-                <span className='text-sm font-normal tracking-wide text-center text-gray-600 cursor-pointer hover:text-gray-500'>
-                  Register
-                </span>
-              </div>
-            </Link> */}
           </>
         ) : (
           <>
