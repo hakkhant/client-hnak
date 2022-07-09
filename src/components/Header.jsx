@@ -11,10 +11,10 @@ const Header = () => {
   };
 
   return (
-    <div className='flex justify-between items-center py-4'>
+    <div className='flex items-center justify-between py-4'>
       <Link to='/'>
-        <div className='mx-2 py-2 px-4 shadow rouned'>
-          <span className='font-bold text-xl tracking-widest text-gray-600 cursor-pointer hover:text-gray-500'>
+        <div className='px-4 py-2 mx-2 shadow rouned'>
+          <span className='text-xl font-bold tracking-widest text-gray-600 cursor-pointer hover:text-gray-500'>
             Hnak
           </span>
         </div>
@@ -23,32 +23,32 @@ const Header = () => {
         {!user ? (
           <>
             <Link to='/login'>
-              <div className='mx-2 py-2 px-4 shadow rouned'>
-                <span className='text-center text-sm font-normal tracking-wide text-gray-600 cursor-pointer hover:text-gray-500'>
+              <div className='px-4 py-2 mx-2 shadow rouned'>
+                <span className='text-sm font-normal tracking-wide text-center text-gray-600 cursor-pointer hover:text-gray-500'>
                   Login
                 </span>
               </div>
             </Link>
-            <Link to='/register'>
-              <div className='mx-2 py-2 px-4 shadow rouned'>
-                <span className='text-center text-sm font-normal tracking-wide text-gray-600 cursor-pointer hover:text-gray-500'>
+            {/* <Link to='/register'>
+              <div className='px-4 py-2 mx-2 shadow rouned'>
+                <span className='text-sm font-normal tracking-wide text-center text-gray-600 cursor-pointer hover:text-gray-500'>
                   Register
                 </span>
               </div>
-            </Link>
+            </Link> */}
           </>
         ) : (
           <>
             <Link to='/create'>
-              <div className='mx-2 py-2 px-4 shadow rouned'>
-                <span className='text-center text-sm font-normal tracking-wide text-gray-600 cursor-pointer hover:text-gray-500'>
+              <div className='px-4 py-2 mx-2 shadow rouned'>
+                <span className='text-sm font-normal tracking-wide text-center text-gray-600 cursor-pointer hover:text-gray-500'>
                   Create
                 </span>
               </div>
             </Link>
-            <div className='mx-2 py-2 px-4 shadow rouned'>
+            <div className='px-4 py-2 mx-2 shadow rouned'>
               <button
-                className='text-center inline text-sm font-normal tracking-wide text-gray-600 cursor-pointer hover:text-gray-500'
+                className='inline text-sm font-normal tracking-wide text-center text-gray-600 cursor-pointer hover:text-gray-500'
                 onClick={logout}
               >
                 Logout
